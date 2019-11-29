@@ -1,1 +1,17 @@
+Lightning Web Components is a new programming model for building Lightning components.
+Aura-based Lightning components are built using both HTML and JavaScript, but LWC is built directly on the Web stack. A developer who works on LWC is not only using coding skills on a particular framework but in other frameworks like React or Angular, which are based on the Web Stack.
+A Web stack is the collection of software required for Web development. At a minimum, a Web stack contains an operating system (OS), a programming language, database software and a Web server. LAMP is one commonly used Web stack.
+XAMPP stands for X-OS(Cross-platform), Apache, MariaDB(Mysql), PHP and Perl.
+LAMP is one commonly used Web stack. It uses Linux as the operating system, Apache as the Web server, MySQL as the relational database management system and PHP as the object-oriented scripting language.
+A component that renders UI must have an HTML template file and a JavaScript class file. It may include a CSS file, additional JavaScript utility files, and test files. The HTML template, JavaScript class, and CSS file must have the same name. The framework uses the name to autowire the relationship between them.
 
+mynamespace
+    └──myComponent
+        ├──__tests__
+        |       └──myComponent.test.js
+        ├──myComponent.html
+        ├──myComponent.js
+        ├──shareCode.js
+        └──myComponent.css
+        
+https://lwc.dev/guide/reference
