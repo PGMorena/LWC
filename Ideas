@@ -15,3 +15,36 @@ mynamespace
         └──myComponent.css
         
 https://lwc.dev/guide/reference
+
+Lightning web components are custom elements built using HTML and modern JavaScript.
+The Lightning Web Components UI framework uses core Web Components standards and provides only what’s necessary to perform well in browsers.
+
+<----Web Components---->
+Web Components are a new browser feature that provides a standard component model for the Web, consisting of several pieces maintained in different places:
+
+Shadow DOM
+Most of the parts are now maintained in DOM Standard, called shadow trees. Some of the parts are still remained in this repository. See Issue #661 for the progress of upstreaming those parts from the partially out-of-date Shadow DOM document.
+Issues against the DOM and HTML Standard.
+Issues raised in this repository.
+The old issue tracker on W3C bugzilla, which is no longer used.
+Custom Elements
+Custom elements were upstreamed into the HTML Standard (and bits in the DOM Standard) and are maintained there.
+Issues against the DOM and HTML Standard.
+Issues raised in this repository.
+The old issue tracker on W3C bugzilla, which is no longer used.
+HTML Templates
+HTML Templates were upstreamed into the HTML Standard and are fully maintained there.
+CSS changes
+The CSS WG works on CSS Scoping and CSS Shadow Parts, which help dealing with shadow trees with various selectors. Various other parts of CSS and its object model are also impacted by shadow trees and directly worked on in the various CSS specificaions.
+Issues against the CSS WG repository.
+JSON, CSS, HTML Modules
+Successor to the abandoned HTML Imports, allows JSON, CSS, and HTML markup to be requested by a component. HTML Modules Spec work is being incubated upstream in whatwg/html (see PR). For new issues, please file against whatwg/html or here in w3c/webcomponents. See also the HTML Modules explainer, initial proposal, and earlier design ideas.
+Issues raised in HTML Standard
+Issues raised in this repository. Includes related issues for other potential module-types, such as CSS and JSON.
+Old issue tracker includes a few issues filed when the feature was first proposed. Please avoid filing new issues there.
+
+
+
+
+
+
