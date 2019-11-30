@@ -37,30 +37,16 @@ wiredAccounts({ error, data }) {
             this.accounts = undefined;
         }
     }
-apexMethodName—An imported symbol that identifies the Apex method.
-apexMethodReference—The name of the Apex method to import.
-Classname—The name of the Apex class.
-Namespace—The namespace of the Salesforce organization. Specify a namespace unless the organization uses the default namespace (c), in which case don’t specify it.
-Import getSObjectValue from @salesforce/apex. Call this method to get a field value from an object retrieved from an Apex method.
-import { getSObjectValue } from '@salesforce/apex';
-getSObjectValue(sobject, fieldApiName);
-sobject—The object returned by the Apex method.
-fieldApiName—The API name of the field. The value can be either a string or reference to a field imported from @salesforce/schema. You can specify up to 5 levels of spanning fields. For example, Opportunity.Account.CreatedBy.LastModifiedById returns 4 levels of spanning fields.
-Import refreshApex from @salesforce/apex. Call this method to query the server for updated data and refresh the cache of a wired property.
-import { refreshApex } from '@salesforce/apex';
-refreshApex(wiredProperty)
-wiredProperty—A property or method annotated with @wire. To refresh a wired method, you must pass the argument the wired method receives (which is the wired value).
-See Call Apex Methods.
-@salesforce/apexContinuation
-Import Apex methods from @salesforce/apexContinuation.
-import apexMethod from '@salesforce/apexContinuation/Namespace.Classname.apexMethod';
 
+```
 import startRequest from '@salesforce/apexContinuation/SampleContinuationClass.startRequest';
 apexMethodName—An imported symbol that identifies the Apex method.
 apexMethodReference—The name of the Apex method to import.
 Classname—The name of the Apex class.
 Namespace—The namespace of the Salesforce organization. Specify a namespace unless the organization uses the default namespace (c), in which case don’t specify it.
 See Make Long-Running Callouts with Continuations.
+
+```javascript
 @salesforce/client/formFactor
 // Syntax
 import formFactorPropertyName from @salesforce/client/formFactor
@@ -111,52 +97,4 @@ import channelName from '@salesforce/messageChannel/channelReference';
 import channelName from '@salesforce/messageChannel/namespace__channelReference';
 // Example
 import SAMPLEMC from '@salesforce/messageChannel/SampleMessageChannel__c';
-channelName—An imported symbol that identifies the message channel.
-channelReference—The API name of the message channel.
-namespace—If the message channel is in a managed package, this value is the namespace of the managed package. If the message channel is not in a managed package, do not include a namespace.
-See Communicate Across the DOM with Lightning Message Service
-@salesforce/resourceUrl
-Import static resources in your Salesforce organization from @salesforce/resourceUrl.
-// Syntax
-import resourceName from '@salesforce/resourceUrl/resourceReference';
-// Syntax for resources in a managed package
-import myResource from '@salesforce/resourceUrl/namespace__resourceReference';
-// Example
-import TRAILHEAD_LOGO from '@salesforce/resourceUrl/trailhead_logo';
-myResource—A name that refers to the static resource.
-resourceReference—The name of the static resource.
-A static resource name can contain only underscores and alphanumeric characters, and must be unique in your org. It must begin with a letter, not include spaces, not end with an underscore, and not contain two consecutive underscores.
-
-namespace—If the static resource is in a managed package, this value is the namespace of the managed package.
-See Access Static Resources.
-@salesforce/schema
-Import references to Salesforce objects and fields from @salesforce/schema.
-// Syntax
-import objectName from '@salesforce/schema/objectReference';
-import objectNamePlural from '@salesforce/schema/objectReference[]';
-import fieldName from '@salesforce/schema/object.fieldReference';
-// Example
-import POSITION_OBJECT from '@salesforce/schema/Position__c';
-// Example
-import POSITION_OBJECTS from '@salesforce/schema/Position__c[]';
-import NAME_FIELD from '@salesforce/schema/Account.Name';
-objectName—An imported symbol that identifies the Salesforce object.
-objectReference—The name of a Salesforce object.
-fieldName—An imported symbol that identifies the Salesforce field.
-fieldReference—The name of a Salesforce field.
-See Import References to Salesforce Objects and Fields.
-@salesforce/user
-Import the current user’s ID from @salesforce/user/Id.
-// Syntax
-import userId from '@salesforce/user/Id';
-// Example
-import Id from '@salesforce/user/Id';
-userId—An imported symbol that identifies the Salesforce user ID.
-To determine whether the user is a guest user, import the current user’s status from @salesforce/user/isGuest.
-// Syntax
-import isGuestUser from '@salesforce/user/isGuest';
-// Example
-import isGuest from '@salesforce/user/isGuest';
-isGuestUser—An imported symbol that identifies whether the user is a guest user (true) or not (false).
-See Get Information About the Current User.
 ```
