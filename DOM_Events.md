@@ -1,13 +1,3 @@
- <button id="myBtn">Try it</button>
- <p id="demo"></p>
- <script>
- # document.getElementById("myBtn").addEventListener("click", displayDate);
-
-  function displayDate() {
-        document.getElementById("demo").innerHTML = Date();
-  }
- </script>
-
 
 # HTML DOM allows JavaScript to react to HTML events:
         When a user clicks the mouse
