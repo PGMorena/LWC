@@ -7,3 +7,14 @@
         When an input field is changed
         When an HTML form is submitted
         When a user strokes a key
+ ```javascript
+ <button id="myBtn">Try it</button>
+ <p id="demo"></p>
+ <script>
+ document.getElementById("myBtn").addEventListener("click", displayDate);
+
+  function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+  }
+ </script>
+ ```
