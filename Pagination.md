@@ -1,4 +1,5 @@
 # Apex Class
+```javascript
 public with sharing class dsiplaycases {
        @AuraEnabled
        public static Integer TotalRecords(){
@@ -187,3 +188,4 @@ lastpagehandler(){
 }
 
 }
+```
