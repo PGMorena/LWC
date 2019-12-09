@@ -22,7 +22,10 @@ public with sharing class dsiplaycases {
            return v_Offset;
        }
 }
+```
+
 # Paginator
+```javascript
 ## Paginator.Html
 <template>
     <lightning-layout>
@@ -100,8 +103,9 @@ export default class Paginator extends LightningElement {
  
     }
 }
-
+```
 #Display cases
+```javascript
 ##displaycases.html
 <template>
         <lightning-card title="Case Records" icon-name="custom:custom63">
