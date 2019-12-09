@@ -124,7 +124,7 @@ export default class Paginator extends LightningElement {
                 <c-paginator  onprevious={previousHandler2} onnext={nextHandler2} onselected={changeHandler2} onfirstpage={firstpagehandler} onlastpage={lastpagehandler}></c-paginator>
             </div>
         </lightning-card>
-    </template>
+</template>
 ## displaycases.js
 import { LightningElement, wire, track, api } from 'lwc';
 import getCaseList from '@salesforce/apex/dsiplaycases.getCaseList';
