@@ -59,8 +59,6 @@ import { LightningElement, api, track } from 'lwc';
 /* eslint-disable no-console */
  /* eslint-disable no-alert */
 export default class Paginator extends LightningElement {
-    
-  //  @track selectedValue;
     @api
     changeView(str){
         let test = this.template.querySelectorAll('lightning-button');
@@ -131,7 +129,6 @@ import getCaseList from '@salesforce/apex/dsiplaycases.getCaseList';
 import getNext from '@salesforce/apex/dsiplaycases.getNext';
 import getPrevious from '@salesforce/apex/dsiplaycases.getPrevious';
 import TotalRecords from '@salesforce/apex/dsiplaycases.TotalRecords';
-//import { refreshApex } from '@salesforce/apex';
 
 /* eslint-disable no-console */
  /* eslint-disable no-alert */
