@@ -46,4 +46,32 @@ export default class Child extends LightningElement {
 }
 ```
 # Child to Parent
+1. Using Wire
+```javascript
+import { LightningElement, wire, track } from 'lwc';
+import getCaseList from '@salesforce/apex/dsiplaycases.getCaseList';
 
+export default class displaycases extends LightningElement {
+@track v_Offset=0;
+@track page_size = 10;
+//v_Offset,v_pagesize-> parameter in apex class method getCaseList
+@wire(getCaseList, { v_Offset: '$v_Offset', v_pagesize: '$page_size' }) cases;
+
+}
+Important: Remember that the method must be static, and global or public. The method must be decorated with @AuraEnabled(cacheable=true).
+```
+2. Imperatively
+```javascript
+import { LightningElement, track} from 'lwc';
+import getCaseList from '@salesforce/apex/dsiplaycases.getCaseList';
+
+export default class displaycases extends LightningElement {
+@track cases;
+
+connectedCallback() {
+    getCaseList({parameter: value}).then(result=>{
+        this.cases = result;
+    });
+}
+}
+```
