@@ -4,7 +4,7 @@ To invoke child function from parent, you need to do the below steps:
 2. Use this.template.querySelector to access component in parent's javascript function.
 sample code below:
 ```javascript
-<--------------------Parent---------------------------------------------->
+<--------------------Parent------------------------------------------------>
 <template>
         <lightning-card title="Case Records" icon-name="custom:custom63">
                 <c-child></c-child>
@@ -14,7 +14,7 @@ sample code below:
 //put this line where you want to invoke child method
 this.template.querySelector('c-child').changeView('falseprevious');
 
-<---------------------Child----------------------------------------------->
+<---------------------Child-------------------------------------------------->
 import { LightningElement, api} from 'lwc';
 /* eslint-disable no-console */
  /* eslint-disable no-alert */
@@ -30,7 +30,7 @@ export default class Child extends LightningElement {
 2. Pass the value while calling child in parent
 sample code below:
 ```javascript
-<--------------------Parent---------------------------------------------->
+<--------------------Parent----------------------------------------------------->
 <template>
         <lightning-card title="Case Records" icon-name="custom:custom63">
                 <c-child changeView="pass this value to child"></c-child>
