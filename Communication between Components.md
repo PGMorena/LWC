@@ -58,7 +58,8 @@ export default class displaycases extends LightningElement {
 @wire(getCaseList, { v_Offset: '$v_Offset', v_pagesize: '$page_size' }) cases;
 
 }
-Important: Remember that the method must be static, and global or public. The method must be decorated with @AuraEnabled(cacheable=true).
+Important: Remember that the method must be static, and global or public. 
+The method must be decorated with @AuraEnabled(cacheable=true).
 ```
 2. Imperatively
 ```javascript
