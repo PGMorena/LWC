@@ -45,3 +45,5 @@ export default class Child extends LightningElement {
     @api changeView;
 }
 ```
+# Child to Parent
+
