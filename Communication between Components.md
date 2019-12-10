@@ -25,7 +25,7 @@ export default class Child extends LightningElement {
     }   
 }
 ```
-<----------------------- # OR -------------------------------------------------->
+<----------------------- # OR ------------------------------------------------------->
 1. Anotate any variable with  @api anotation
 2. Pass the value while calling child in parent
 sample code below:
