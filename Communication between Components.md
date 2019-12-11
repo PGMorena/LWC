@@ -85,6 +85,9 @@ changeHandler2(event){
 }
 ```
 3. Handle in parent 2(Attach an Event Listener Programmatically)
+--->When you attach event listener programmatically, you need to explicitly set bubbles property to true, so that the event bubbles up to parent component.
+
+Set 'bubbles : true' where you have declared your 'customEvent'.
 ```javascript
 <--------------------Parent----------------------------------------------------->
 <template>
