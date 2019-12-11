@@ -63,7 +63,7 @@ export default class Paginator extends LightningElement {
     }
 }
 ```
-2. Handle in parent 1
+2. Handle in parent 1(Declaratively)
         --> if event name is 'selected' then while handling in parent use 'onselected'
 ```javascript
 <--------------------Parent----------------------------------------------------->
