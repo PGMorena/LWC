@@ -1,4 +1,4 @@
-# Implement Lightning Web Component in VF Page
+# Call Lightning Web Component in VF Page
 Steps are below:
 1. Create Lightning Web Component
 2. Create a Lightning App
