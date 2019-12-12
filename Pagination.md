@@ -26,6 +26,7 @@ public with sharing class dsiplaycases {
 ## Explanation:
 1. TotalRecords() -> This method returns total number of case records in an org. This is used to disabled the next button when page        reached to the last page.
 2. getCaseList -> This method return list of cases as per the page size and offset.
+3. getNext/getPrevious -> These method sets the current offset value.
 
 # Paginator
 ```javascript
