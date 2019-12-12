@@ -7,4 +7,34 @@ public with sharing class dsiplaycases {
        }
 }
 ```
+## Using Wire
+```javascript
+import { LightningElement, wire, track, api } from 'lwc';
+import getCaseList from '@salesforce/apex/dsiplaycases.getCaseList';
 
+/* eslint-disable no-console */
+ /* eslint-disable no-alert */
+
+export default class displaycases extends LightningElement {
+
+@wire(getCaseList, { v_Offset: 5, v_pagesize: 6 }) cases;
+
+}
+```
+## Imperatively
+```javascript
+import { LightningElement, wire, track, api } from 'lwc';
+import getCaseList from '@salesforce/apex/dsiplaycases.getCaseList';
+
+/* eslint-disable no-console */
+ /* eslint-disable no-alert */
+
+export default class displaycases extends LightningElement {
+Handler(){
+    getCaseList({v_Offset: 5, v_pagesize: 6}).then(result=>{
+        alert(result);
+    });
+}
+
+}
+```
