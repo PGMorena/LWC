@@ -155,7 +155,7 @@ connectedCallback() {
     });
 }
 
-reviousHandler2(){
+previousHandler2(){
     getPrevious({v_Offset: this.v_Offset, v_pagesize: this.page_size}).then(result=>{
         this.v_Offset = result;
         if(this.v_Offset === 0){
