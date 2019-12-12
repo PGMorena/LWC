@@ -1,6 +1,6 @@
 # Parent to child
 To invoke child function from parent, you need to do the below steps:
-1. Anonate child function with @api
+1. Anotate child function with @api
 2. Use this.template.querySelector to access component in parent's javascript function.
 sample code below:
 ```javascript
