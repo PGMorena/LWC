@@ -11,14 +11,14 @@ public with sharing class dsiplaycases {
        }
 
        @AuraEnabled(cacheable=true)
-       public static Integer getNext(Integer v_Offset){
-           v_Offset += 10;
+       public static Integer getNext(Integer v_Offset, Integer v_pagesize){
+           v_Offset += v_pagesize;
            return v_Offset;
        }
 
        @AuraEnabled(cacheable=true)
-       public static Integer getPrevious(Integer v_Offset){
-           v_Offset -= 10;
+       public static Integer getPrevious(Integer v_Offset, Integer v_pagesize){
+           v_Offset -= v_pagesize;
            return v_Offset;
        }
 }
@@ -155,8 +155,8 @@ connectedCallback() {
     });
 }
 
-previousHandler2(){
-    getPrevious({v_Offset: this.v_Offset}).then(result=>{
+reviousHandler2(){
+    getPrevious({v_Offset: this.v_Offset, v_pagesize: this.page_size}).then(result=>{
         this.v_Offset = result;
         if(this.v_Offset === 0){
             this.template.querySelector('c-paginator').changeView('trueprevious');
@@ -166,7 +166,7 @@ previousHandler2(){
     });
 }
 nextHandler2(){
-    getNext({v_Offset: this.v_Offset}).then(result=>{
+    getNext({v_Offset: this.v_Offset, v_pagesize: this.page_size}).then(result=>{
         this.v_Offset = result;
        if(this.v_Offset + 10 > this.v_TotalRecords){
             this.template.querySelector('c-paginator').changeView('truenext');
