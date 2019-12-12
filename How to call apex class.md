@@ -1,5 +1,5 @@
 # Expose Apex Methods to Lightning Web Components
-## To expose an Apex method to a Lightning web component, the method must be static and either global or public. Annotate the method with @AuraEnabled.
+## To expose an Apex method to a Lightning web component, the method must  be static and either global or public. Annotate the method with @AuraEnabled.
 ```javascript
 public with sharing class ContactController {
     @AuraEnabled(cacheable=true)
