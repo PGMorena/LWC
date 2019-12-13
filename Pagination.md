@@ -63,46 +63,23 @@ import { LightningElement, api, track } from 'lwc';
 /* eslint-disable no-console */
  /* eslint-disable no-alert */
 export default class Paginator extends LightningElement {
-    @api
+     @api
     changeView(str){
-        let buttons = this.template.querySelectorAll('lightning-button');
-
-        if(str == 'trueprevious'){
-          for(const button of buttons){
-            if(button.label == 'Previous'){
-                button.disabled = true;
-            }
-          }
+        if(str === 'trueprevious'){
+            this.template.querySelector('lightning-button.Previous').disabled = true;
         }
         if(str === 'falsenext'){
-            for(const button of buttons){
-                if(button.label == 'Next'){
-                    button.disabled = false;
-                }
-              }
+            this.template.querySelector('lightning-button.Next').disabled = false;
         }
         if(str === 'truenext'){
-            for(const button of buttons){
-                if(button.label == 'Next'){
-                    button.disabled = true;
-                }
-              }
+            this.template.querySelector('lightning-button.Next').disabled = true;
         }
         if(str === 'falseprevious'){
-            for(const button of buttons){
-                if(button.label == 'Previous'){
-                    button.disabled = false;
-                }
-              }
+            this.template.querySelector('lightning-button.Previous').disabled = false;
         }
     }
     renderedCallback(){
-        let buttons = this.template.querySelectorAll('lightning-button');
-        for(const button of buttons){
-            if(button.label == 'Previous'){
-                button.disabled = true;
-            }
-          }
+          this.template.querySelector('lightning-button.Previous').disabled = true;
     }
     previousHandler1() {
         this.dispatchEvent(new CustomEvent('previous'));
