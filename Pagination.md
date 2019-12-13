@@ -65,23 +65,44 @@ import { LightningElement, api, track } from 'lwc';
 export default class Paginator extends LightningElement {
     @api
     changeView(str){
-        let test = this.template.querySelectorAll('lightning-button');
+        let buttons = this.template.querySelectorAll('lightning-button');
+
         if(str == 'trueprevious'){
-            test[0].disabled = true;
+          for(const button of buttons){
+            if(button.label == 'Previous'){
+                button.disabled = true;
+            }
+          }
         }
-        if(str == 'falsenext'){
-            test[3].disabled = false; 
+        if(str === 'falsenext'){
+            for(const button of buttons){
+                if(button.label == 'Next'){
+                    button.disabled = false;
+                }
+              }
         }
-        if(str == 'truenext'){
-            test[3].disabled = true;
+        if(str === 'truenext'){
+            for(const button of buttons){
+                if(button.label == 'Next'){
+                    button.disabled = true;
+                }
+              }
         }
-        if(str == 'falseprevious'){
-            test[0].disabled = false;
+        if(str === 'falseprevious'){
+            for(const button of buttons){
+                if(button.label == 'Previous'){
+                    button.disabled = false;
+                }
+              }
         }
     }
     renderedCallback(){
-        let test = this.template.querySelectorAll('lightning-button');
-        test[0].disabled = true; 
+        let buttons = this.template.querySelectorAll('lightning-button');
+        for(const button of buttons){
+            if(button.label == 'Previous'){
+                button.disabled = true;
+            }
+          }
     }
     previousHandler1() {
         this.dispatchEvent(new CustomEvent('previous'));
