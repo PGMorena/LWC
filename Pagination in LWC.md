@@ -1,3 +1,5 @@
+![Image of Pagination in LWC](https://github.com/Rakesh1Singh/LWC/blob/master/Display%20Case%20Pagination.JPG?raw=true)
+
 # Apex Class
 ```javascript
 public with sharing class dsiplaycases {
