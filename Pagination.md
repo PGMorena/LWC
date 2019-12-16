@@ -105,7 +105,7 @@ export default class Paginator extends LightningElement {
 }
 ```
 ## Explanation:
-Paginator component(child) contains all buttons(First Page, Last Page, Previous and Next) and Page Size dropdown. Whenever any event    happens,it is creating an event and dispatching it to Parent component(DisplayCases). And then Parent component handles the event and    does the needful.
+Paginator component(child) contains all buttons(First Page, Last Page, Previous and Next) and Page Size dropdown. Whenever any event    happens,it is creating an event and dispatching it to the Parent component(DisplayCases). And then Parent component handles the event and does the needful.
    
 # Display cases
 ```javascript
