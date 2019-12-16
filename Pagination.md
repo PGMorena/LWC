@@ -105,7 +105,8 @@ export default class Paginator extends LightningElement {
 }
 ```
 ## Explanation:
-Paginator component(child) contains all buttons(First Page, Last Page, Previous and Next) and Page Size dropdown. Whenever any event    happens,it is creating an event and dispatching it to the Parent component(DisplayCases). And then Parent component handles the event and does the needful.
+1. Paginator component(child) contains all buttons(First Page, Last Page, Previous and Next) and Page Size dropdown. Whenever any event    happens,it is creating an event and dispatching it to the Parent component(DisplayCases). And then Parent component handles the event    and does the needful.
+2. renderedCallback() called after every render of the component. This hook flows from child to parent.
    
 # Display cases
 ```javascript
@@ -197,4 +198,5 @@ lastpagehandler(){
 }
 ```
 ## Explanation:
-DisplayCases component(parent) is using datatable to display case records.
+1. DisplayCases component(parent) is using datatable to display case records.
+2. The connectedCallback() lifecycle hook fires when a component is inserted into the DOM. This will execute the logic before rendering    of component and after constructor logic execution. Components renders after connectedCallback().
