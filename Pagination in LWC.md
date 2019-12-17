@@ -112,7 +112,7 @@ export default class Paginator extends LightningElement {
 ```
 ## Explanation:
 1. Paginator component(child) contains all buttons(First Page, Last Page, Previous and Next) and Page Size dropdown. Whenever any event    happens,it is creating an event and dispatching it to the Parent component(DisplayCases). And then Parent component handles the event    and does the needful.
-2. changeView() method is used to disable the buttons(eg. When we are on the first page, previous button should be disabled).
+2. changeView() method is used to disable/enable the buttons(eg. When we are on the first page, previous button should be disabled).
 3. renderedCallback() called after every render of the component. This hook flows from child to parent.
 4. Other methods are used for dispatching the events.
 
@@ -212,4 +212,5 @@ lastpagehandler(){
 ```
 ## Explanation:
 1. DisplayCases component(parent) is using datatable to display case records.
-2. The connectedCallback() lifecycle hook fires when a component is inserted into the DOM. This will execute the logic before rendering    of component and after constructor logic execution. Components renders after connectedCallback().
+2. Handlers are setting offset value for records displayed and invoking changeView mathod of child to enable or disable the buttons.
+3. The connectedCallback() lifecycle hook fires when a component is inserted into the DOM. This will execute the logic before rendering    of component and after constructor logic execution. Components renders after connectedCallback(). Here in connectedCallback we are      fetching number of case object recordson page load.
