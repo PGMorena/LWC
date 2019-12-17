@@ -30,7 +30,7 @@ public with sharing class dsiplaycases {
 2. getCaseList -> This method return list of cases as per the page size and offset.
 3. getNext/getPrevious -> These method sets the current offset value.
 
-# Paginator
+# Paginator.html
 ```javascript
 ## Paginator.Html
 <template>
@@ -59,8 +59,10 @@ public with sharing class dsiplaycases {
         </lightning-layout-item>
     </lightning-layout>
 </template>
+```
 
 ## Paginator.js
+```javascript
 import { LightningElement, api, track } from 'lwc';
 /* eslint-disable no-console */
  /* eslint-disable no-alert */
@@ -111,8 +113,9 @@ export default class Paginator extends LightningElement {
 2. renderedCallback() called after every render of the component. This hook flows from child to parent.
    
 # Display cases
-```javascript
+
 ##displaycases.html
+```javascript
 <template>
         <lightning-card title="Case Records" icon-name="custom:custom63">
     
@@ -131,7 +134,10 @@ export default class Paginator extends LightningElement {
             </div>
         </lightning-card>
 </template>
+```
+
 ## displaycases.js
+```javascript
 import { LightningElement, wire, track, api } from 'lwc';
 import getCaseList from '@salesforce/apex/dsiplaycases.getCaseList';
 import getNext from '@salesforce/apex/dsiplaycases.getNext';
