@@ -112,8 +112,10 @@ export default class Paginator extends LightningElement {
 ```
 ## Explanation:
 1. Paginator component(child) contains all buttons(First Page, Last Page, Previous and Next) and Page Size dropdown. Whenever any event    happens,it is creating an event and dispatching it to the Parent component(DisplayCases). And then Parent component handles the event    and does the needful.
-2. renderedCallback() called after every render of the component. This hook flows from child to parent.
-   
+2. changeView() method is used to disable the buttons(eg. When we are on the first page, previous button should be disabled).
+3. renderedCallback() called after every render of the component. This hook flows from child to parent.
+4. Other methods are used for dispatching the events.
+
 # Display cases
 
 ## displaycases.html
@@ -160,6 +162,7 @@ export default class displaycases extends LightningElement {
 @track v_TotalRecords;
 @track page_size = 10;
 
+//Fetching records from apex class
 @wire(getCaseList, { v_Offset: '$v_Offset', v_pagesize: '$page_size' }) cases;
 
 //Executes on the page load
