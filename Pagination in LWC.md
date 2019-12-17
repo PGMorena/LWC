@@ -1,4 +1,4 @@
-# Inroduction
+# Introduction
 Pagination is used for displaying large number of records in chunks. Using pagination we can control the number of records displayed on each page. 
 
 ![Image of Pagination in LWC](https://github.com/Rakesh1Singh/LWC/blob/master/Display%20Case%20Pagination.JPG?raw=true)
