@@ -30,9 +30,8 @@ public with sharing class dsiplaycases {
 2. getCaseList -> This method return list of cases as per the page size and offset.
 3. getNext/getPrevious -> These method sets the current offset value.
 
-# Paginator.html
+## Paginator.html
 ```javascript
-## Paginator.Html
 <template>
     <lightning-layout>
         <lightning-layout-item>
@@ -114,7 +113,7 @@ export default class Paginator extends LightningElement {
    
 # Display cases
 
-##displaycases.html
+## displaycases.html
 ```javascript
 <template>
         <lightning-card title="Case Records" icon-name="custom:custom63">
