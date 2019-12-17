@@ -213,4 +213,4 @@ lastpagehandler(){
 ## Explanation:
 1. DisplayCases component(parent) is using datatable to display case records.
 2. Handlers are setting offset value for records displayed and invoking changeView mathod of child to enable or disable the buttons.
-3. The connectedCallback() lifecycle hook fires when a component is inserted into the DOM. This will execute the logic before rendering    of component and after constructor logic execution. Components renders after connectedCallback(). Here in connectedCallback we are      fetching number of case object recordson page load.
+3. The connectedCallback() lifecycle hook fires when a component is inserted into the DOM. This will execute the logic before rendering    of component and after constructor logic execution. Components renders after connectedCallback(). Here in connectedCallback we are      fetching number of case object records on page load.
