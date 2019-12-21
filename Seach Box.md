@@ -17,6 +17,8 @@ public with sharing class ContactSearch {
     }
 }
 ```
+
+# contactSearch Lightning Web Component
 ```javascript
 <template>
     <lightning-card title="Datatable Example" icon-name="custom:custom63">
