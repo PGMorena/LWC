@@ -194,7 +194,7 @@ export default class ContactSearch extends NavigationMixin(LightningElement) {
 }
 
 ```
-contactRecordEditForm Lightning Web Component
+## contactRecordEditForm Lightning Web Component
 ```javascript
 <template>
     <lightning-record-edit-form record-id={recordid1}
