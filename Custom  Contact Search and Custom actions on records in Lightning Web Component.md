@@ -5,7 +5,7 @@ public with sharing class ContactSearch {
      @AuraEnabled(cacheable=true)
     public static List<Contact> getContactList(String searchInput) {
         if(searchInput == ''){
-            return [SELECT Id, FirstName, LastName, Title, Phone, Email FROM Contact];
+            return [SELECT Id, FirstName, LastName, Title, Phone, Email FROM Contact limit 10];
         }else{
             System.debug('searchInput'+searchInput);
             String query  = 'SELECT Id, FirstName, LastName, Title, Phone, Email FROM Contact where FirstName LIKE \''+String.escapeSingleQuotes(searchInput)+'%\' OR LastName LIKE \''+String.escapeSingleQuotes(searchInput)+'%\' LIMIT 10';
