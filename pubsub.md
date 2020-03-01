@@ -1,3 +1,4 @@
+```javascript
 /**
  * A basic pub-sub mechanism for sibling component communication
  *
@@ -100,3 +101,4 @@ export {
     unregisterAllListeners,
     fireEvent
 };
+```
