@@ -35,7 +35,7 @@ enrollStudent({Name:'Roushan',  Subject:'Colour'}).then(function(){
     DisplayStudent();
 });
 //enrollStudent({ Name: 'Roushan', Subject: 'Colour' }).then(()=>DisplayStudent());
-
+//enrollStudent({ Name: 'Roushan', Subject: 'Colour' }).then(DisplayStudent);
 
 //DisplayStudent(); 
 ```
