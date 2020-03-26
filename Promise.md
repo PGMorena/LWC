@@ -5,6 +5,7 @@ let Students = [
   ]
 
 function enrollStudent(student){
+    //return resolve and reject
     // return new Promise((resolve, reject) =>{
     return new Promise(function(resolve, reject){
         const err = false;
