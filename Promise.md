@@ -107,3 +107,28 @@ async function f1() {
 f1();
 
 ```
+
+```javascript
+function doSomething(msg){ 
+  return new Promise(resolve =>{
+    
+    setTimeout(() =>{
+      console.log(msg);
+        setTimeout(()=>{
+          resolve(msg+msg);
+        }, 3000);
+         
+    }, 1000);
+ 
+  });
+}
+
+async function f1(){
+  var rak = await doSomething('rakesh');
+  console.log('rak->'+rak);
+  var sin = await doSomething('singh');
+  console.log('sin->'+sin);
+}
+
+f1();
+```
