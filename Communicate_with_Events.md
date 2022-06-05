@@ -1,4 +1,4 @@
-# Communicate with Events
+# Communicate with Events 1
 Lightning web components dispatch standard DOM events.
 Components can also create and dispatch custom events. 
 
